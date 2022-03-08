@@ -6,12 +6,13 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 11:26:13 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/03/08 01:29:07 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/03/08 01:51:39 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC:= clang++
-SRCS := megaphone.cpp 
+SRCS := megaphone.cpp
+
 OBJS := $(SRCS:%.cpp=%.o)
 CPPFLAGS:= -Wall -Werror -Wextra
 CPPSTD:= -std=c++98
@@ -34,3 +35,5 @@ fclean: clean
 		rm $(NAME)
 
 re:	fclean all
+
+.PHONY: all $(NAME) clean fclean re
