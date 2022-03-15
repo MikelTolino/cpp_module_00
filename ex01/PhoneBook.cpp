@@ -19,6 +19,19 @@ void PhoneBook::addNewContact(void)
 	std::cout << "Contact added\n\n";
 }
 
+std::string truncate(std::string str) {
+
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (i == 9)
+		{
+			str[i] = '.';
+			break;
+		}
+	}
+	return (str.substr(0, 10));
+}
+
 void PhoneBook::searchContact(void)
 {
 	int index;
@@ -28,11 +41,11 @@ void PhoneBook::searchContact(void)
 		std::cout << "|";
 		std::cout << i + 1;
 		std::cout << "|";
-		std::cout << std::setw (10) << std::right << this->contact[i].getFirstName() ;
+		std::cout << std::setw (10) << std::right << truncate(this->contact[i].getFirstName()) ;
 		std::cout << "|";
-		std::cout << std::setw (10) << std::right << this->contact[i].getLastName();
+		std::cout << std::setw (10) << std::right << truncate(this->contact[i].getLastName());
 		std::cout << "|";
-		std::cout << std::setw (10) << std::right << this->contact[i].getNickname();
+		std::cout << std::setw (10) << std::right << truncate(this->contact[i].getNickname());
 		std::cout << "|";
 		std::cout << "\n";
 	}
