@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 11:26:13 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/03/10 20:11:35 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/03/15 17:57:58 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS:= $(wildcard $(SRCS_DIR)*.cpp)
 OBJS := $(SRCS:%.cpp=%.o)
 CPPFLAGS:= -Wall -Werror -Wextra
 CPPSTD:= -std=c++98
-NAME:= phonebook
+NAME:= AccountTest
 
 all: $(NAME)
 
