@@ -36,7 +36,6 @@ public:
 	int		checkAmount( void ) const;
 	void	displayStatus( void ) const;
 
-
 private:
 
 	static int	_nbAccounts;
