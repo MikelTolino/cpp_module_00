@@ -16,7 +16,7 @@ void PhoneBook::addNewContact(void)
 		this->size = 0;
 	this->contact[this->size].newContact();
 	this->size++;
-	std::cout << "Contact added\n\n";
+	std::cout << "-> Contact added <-\n\n";
 }
 
 std::string truncate(std::string str) {
