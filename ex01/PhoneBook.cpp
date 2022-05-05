@@ -9,12 +9,13 @@ PhoneBook::PhoneBook(void)
 
 void PhoneBook::addNewContact(void)
 {
-	std::cout << "----\n"
+	int index;
+
+	index = size % MAX;
+	std::cout << "----------------\n"
 			  << "Data\n"
-			  << "----\n";
-	if (this->getSize() == 8)
-		this->size = 0;
-	this->contact[this->size].newContact();
+			  << "----------------\n";
+	this->contact[index].newContact();
 	this->size++;
 	std::cout << "-> Contact added <-\n\n";
 }
@@ -36,7 +37,10 @@ void PhoneBook::searchContact(void)
 {
 	int index;
 
-	for (int i = 0; i < (int)this->size; i++)
+	index = this->size;
+	if (this->size > 8)
+		index = 8;
+	for (int i = 0; i < index; i++)
 	{
 		std::cout << "|";
 		std::cout << i + 1;
@@ -52,6 +56,7 @@ void PhoneBook::searchContact(void)
 	std::cout << std::endl;
 	std::cout << "Insert index (1-8): ";
 	std::cin >> index;
+	std::cout << std::endl;
 	index--;
 	if (index >= 0 && index < 8)
 	{
