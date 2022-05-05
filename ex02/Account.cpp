@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 17:53:03 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/03/30 14:30:32 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:08:05 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,6 @@ void Account::_displayTimestamp(void)
 	std::time_t result = std::time(nullptr);
 	char ptr[64];
 
-	std::strftime(ptr, 64, "%G%m%e_%H%M%S" , std::localtime(&result));
+	std::strftime(ptr, 64, "%G%m%d_%H%M%S" , std::localtime(&result));
 	std::cout << "[" << ptr << "] ";
 }
